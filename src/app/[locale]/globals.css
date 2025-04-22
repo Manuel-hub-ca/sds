@@ -1,0 +1,67 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+
+/* html,body{
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+} */
+
+.home {
+  min-height: 100vh;
+}
+/* 
+.contact-parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.contact{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:azure
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rebeccapurple;
+}
+
+.divi{
+  background-color: violet;
+} */
+
+body {
+  cursor: url("/olive-pointer.svg") 4 4, auto;
+}
+a,
+button,
+input,
+textarea,
+select {
+  cursor: url("/olive-pointer.svg") 4 4, auto !important;
+}
