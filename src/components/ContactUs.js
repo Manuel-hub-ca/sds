@@ -1,15 +1,15 @@
 "use client";
 
+import { useTranslations } from "@/components/LanguageProvider";
 import {
   faEnvelope,
+  faIdCard,
   faLocationDot,
   faPhone,
-  faIdCard,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import SocialMedia from "./SocialMedia";
-import { useTranslations } from "@/components/LanguageProvider";
 
 export default function ContactUs() {
   const t = useTranslations();
@@ -18,8 +18,8 @@ export default function ContactUs() {
     {
       icon: faEnvelope,
       label: t("contact.email"),
-      content: "ivandelgue1989@gmail.com",
-      url: "mailto:ivandelgue1989@gmail.com",
+      content: "s.d.srenovation2024@gmail.com",
+      url: "mailto:s.d.srenovation2024@gmail.com",
     },
     {
       icon: faIdCard,
