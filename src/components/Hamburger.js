@@ -90,7 +90,7 @@ const Hamburger = () => {
             Projects
           </Link>
 
-          <div onClick={() => setIsOpen(false)}>
+          <div>
             <FlyoutLink href="#" FlyoutContent={PricingContent}>
               Services
             </FlyoutLink>
