@@ -20,7 +20,6 @@ const Welcome = () => {
           <h1 className="text-2xl md:text-6xl font-bold mb-3 w-11/12">
             {t("welcome.title")}
           </h1>
-          <h1>heyyy yoo</h1>
           <h2 className="text-xl md:text-3xl font-bold mb-2 w-11/12">
             {t("welcome.subtitle")}
           </h2>
