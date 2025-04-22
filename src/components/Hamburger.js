@@ -91,7 +91,7 @@ const Hamburger = () => {
           </Link>
 
           <div>
-            <FlyoutLink href="#" FlyoutContent={PricingContent}>
+            <FlyoutLink href="#" FlyoutContent={PricingContent} isOpen={isOpen} setIsOpen={setIsOpen}>
               Services
             </FlyoutLink>
           </div>

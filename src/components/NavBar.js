@@ -9,6 +9,7 @@ import useIsMobile from "../hooks/useIsMobile";
 import handleNavigation from "../hooks/useScrollElement";
 import Hamburger from "./Hamburger";
 import LanguageChanger from "./LanguageChanger";
+import { faL } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
   const t = useTranslations();
@@ -106,7 +107,7 @@ const NavBar = () => {
   );
 };
 
-const FlyoutLink = ({ children, href, FlyoutContent }) => {
+const FlyoutLink = ({ children, href, FlyoutContent, isOpen, setIsOpen}) => {
   const [open, setOpen] = useState(false);
   const showFlyout = open && FlyoutContent;
   return (
@@ -134,7 +135,7 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
           >
             <div className="absolute bg-transparent -top-6 left-0 right-0 h-6" />
             <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 [background:linear-gradient(315deg,_transparent_50%,_rgba(0,0,0,0.75)_50%)] md:[background:linear-gradient(315deg,_transparent_50%,_rgba(255,255,255,0.3)_50%)]" />
-            <FlyoutContent />
+            <FlyoutContent isOpen={ isOpen} setIsOpen={setIsOpen} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -142,7 +143,7 @@ const FlyoutLink = ({ children, href, FlyoutContent }) => {
   );
 };
 
-const PricingContent = () => {
+const PricingContent = ({isOpen, setIsOpen}) => {
   const t = useTranslations();
   const pathname = usePathname();
   const locale = pathname.split("/")[1] || "fr";
@@ -168,6 +169,7 @@ const [hoveredSlug, setHoveredSlug] = useState(null);
             className="relative hover:text-[#4D5C5A] text-[1.1rem] md:text-[1rem] md:w-full h-fit"
             onMouseEnter={() => setHoveredSlug(slug)}
             onMouseLeave={() => setHoveredSlug(null)}
+            onClick={() => setIsOpen(false)}
           >
             {t(`services.items.${key}.title`)}
 
