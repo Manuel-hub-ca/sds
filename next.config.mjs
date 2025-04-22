@@ -1,10 +1,10 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   async redirects() {
     return [
       {
-        source: "www.sds-construction.ca",
-        destination: "https://sds-construction.ca",
+        source: "/:path*",
+        has: [{ type: "host", value: "www.sds-construction.ca" }],
+        destination: "https://sds-construction.ca/:path*",
         permanent: true,
       },
     ];
