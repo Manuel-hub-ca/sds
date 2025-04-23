@@ -1,13 +1,20 @@
+"use client"
 import Link from "next/link";
+import { useTranslations } from "./LanguageProvider";
 
 export default function Footer() {
+    const t = useTranslations();
   return (
+  
     <>
-      <div className="footer flex flex-col md:flex-row justify-center items-center  gap-3 bg-black/75 h-30 md:h-16 md:text-lg">
-        <p>SOS Construction Inc</p>
-        <p className="">© 2025 All rights reserved </p>
-        <Link href="/fr/policy" className=" hover:text-[#b5c89d] text-[#5c6642]">
-          Privacy Policy
+      <div className="footer flex flex-col md:flex-row justify-center items-center  gap-3 bg-[linear-gradient(to_left,_black_0%,_black_20%,_transparent_50%,_transparent_100%)] h-30 md:h-16 md:text-lg">
+        <p>S.D.S Construction Inc</p>
+        <p className="">{t("copyright")} </p>
+        <Link
+          href="/fr/policy"
+          className=" hover:text-white text-yellow-500"
+        >
+         {t("privacypolicy")}
         </Link>
       </div>
     </>

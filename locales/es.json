@@ -40,7 +40,7 @@
   "policy.points.1": "Solo recopilamos datos necesarios para brindar nuestros servicios.",
   "policy.points.2": "Tu información nunca se vende ni se comparte sin tu consentimiento.",
   "policy.points.3": "Puedes solicitar acceso o eliminación de tus datos en cualquier momento.",
-  "project":"Proyectos",
+  "project": "Proyectos",
   "contact.email": "Correo",
   "contact.phone1": "Telefono 1",
   "contact.phone2": "Telefono 2",
@@ -144,5 +144,7 @@
   "boisMetal.section1.p3": "Un acabado profesional, a la altura de tus más altos estándares.",
   "boisMetal.section2.p1": "Madera en bruto, acero, aluminio o hierro forjado — cada material tiene su propio potencial.",
   "boisMetal.section2.p2": "Lo revelamos mediante creaciones personalizadas, diseñadas para perdurar.",
-  "boisMetal.section2.p3": "Confía en expertos para obtener un resultado estético, seguro y duradero."
+  "boisMetal.section2.p3": "Confía en expertos para obtener un resultado estético, seguro y duradero.",
+  "copyright": "© 2025 Todos los derechos reservados",
+  "privacypolicy": "Política de privacidad"
 }

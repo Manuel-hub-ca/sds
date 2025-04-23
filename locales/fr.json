@@ -116,7 +116,8 @@
   "services.items.tireurJoints.description": "Application précise de composé à joints pour des murs parfaitement lisses, prêts à peindre.",
 
   "services.items.demolition.title": "Démolition",
-  "services.items.demolition.description": "Démolition propre et sécuritaire pour préparer efficacement vos projets de rénovation ou d’agrandissement."
+  "services.items.demolition.description": "Démolition propre et sécuritaire pour préparer efficacement vos projets de rénovation ou d’agrandissement.",
 
-
+  "copyright": "© 2025 Tous droits réservés",
+  "privacypolicy":"Politique de confidentialité"
 }

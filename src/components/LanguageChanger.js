@@ -49,7 +49,7 @@ export default function LanguageChanger({ isMobile }) {
     <div
       ref={dropdownRef}
       className={`rounded-md shadow-lg w-24 h-fit ${
-        isMobile ? "fixed bottom-2 right-1.5" : "relative"
+        isMobile ? "fixed bottom-32 right-1.5" : "relative"
       }`}
     >
       <div
@@ -75,7 +75,7 @@ export default function LanguageChanger({ isMobile }) {
             <li
               key={locale.code}
               onClick={() => changeLocale(locale.code)}
-              className="px-4 py-2 hover:bg-yellow-200 text-gray-800 cursor-pointer"
+              className="px-4 py-2 hover:bg-amber-300 text-gray-800 cursor-pointer"
             >
               {locale.label}
             </li>

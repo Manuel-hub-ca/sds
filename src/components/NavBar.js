@@ -9,7 +9,6 @@ import useIsMobile from "../hooks/useIsMobile";
 import handleNavigation from "../hooks/useScrollElement";
 import Hamburger from "./Hamburger";
 import LanguageChanger from "./LanguageChanger";
-import { faL } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
   const t = useTranslations();
@@ -36,22 +35,19 @@ const NavBar = () => {
   };
 
   useEffect(() => {
-    console.log("isMobile changed:", isMobile);
+    // console.log("isMobile changed:", isMobile);
   }, [isMobile]);
   const isActive = (href) => pathname === href;
   return (
-    <div className="flex fixed top-0 z-50 left-0 w-screen h-20 bg-black/10 justify-between md:justify-around px-3 py-0">
+    <div className="flex fixed top-0 z-50 left-0 w-screen h-20 bg-[linear-gradient(to_right,_black_0%,_black_30%,_transparent_50%,_transparent_100%)] justify-between md:justify-around px-3 py-0">
       <div className="relative w-32 h-full md:w-40">
-        <Link
-          href={localeHome}
-          className="flex justify-center"
-        >
+        <Link href={localeHome} className="flex justify-center">
           <Image
-            src="/img/logo.png"
+            src="/img/logo.JPG"
             alt="Company Logo"
             fill
             priority
-            className="object-contain transition-transform duration-300 hover:scale-110 hover:opacity-75"
+            className="object-contain transition-transform duration-300 hover:opacity-75"
           />
         </Link>
       </div>
@@ -62,7 +58,7 @@ const NavBar = () => {
             <div className="flex flex-row gap w-full justify-around items-center">
               <Link
                 href={localeHome + "/projects"}
-                className={`hover:text-neutral-800 transition-colors duration-200 ${
+                className={`hover:text-amber-300 transition-colors duration-200 ${
                   isActive("/projects")
                     ? "text-neutral- font-semibold"
                     : "text-white"
@@ -75,7 +71,7 @@ const NavBar = () => {
                 {t("navbar.services")}
               </FlyoutLink>
               <button
-                className={`hover:text-neutral-800 transition-colors duration-200 ${
+                className={`hover:text-amber-300 transition-colors duration-200 ${
                   isActive("") ? "text-neutral- font-semibold" : "text-white"
                 }`}
                 onClick={() => handleAboutClick("aboutUs")}
@@ -84,8 +80,10 @@ const NavBar = () => {
               </button>
 
               <button
-                className={`hover:text-neutral-800 transition-colors duration-200 mr-1 ${
-                  isActive(false) ? "text-neutral- font-semibold" : "text-white"
+                className={`hover:text-white transition-colors duration-200 mr-1 ${
+                  isActive(false)
+                    ? "text-neutral- font-semibold"
+                    : "text-amber-300"
                 }`}
                 onClick={() => handleNavigation("contact")}
               >
@@ -116,11 +114,11 @@ const FlyoutLink = ({ children, href, FlyoutContent, isOpen, setIsOpen}) => {
       onMouseLeave={() => setOpen(false)}
       className="group relative h-fit w-fit"
     >
-      <a href={href} className="relative text-white">
+      <a href={href} className="relative text-amber-300 hover:text-white">
         {children}
         <span
           style={{ transform: showFlyout ? "scaleX(1)" : "scaleX(0)" }}
-          className="absolute -bottom-2 -left-2 -right-2 h-[2px] origin-left rounded-full bg-white transition-transform duration-300 ease-out"
+          className="absolute -bottom-2 -left-2 -right-2 h-[2px] origin-left rounded-full bg-amber-300 transition-transform duration-300 ease-out"
         />
       </a>
       <AnimatePresence>
@@ -131,7 +129,7 @@ const FlyoutLink = ({ children, href, FlyoutContent, isOpen, setIsOpen}) => {
             exit={{ opacity: 0, y: 15 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
             style={{ translateX: "-50%" }}
-            className="absolute left-1/2 top-12 bg-black/75 md:bg-white/30 rounded-md"
+            className="absolute left-1/2 top-12 bg-black/75 rounded-md"
           >
             <div className="absolute bg-transparent -top-6 left-0 right-0 h-6" />
             <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 [background:linear-gradient(315deg,_transparent_50%,_rgba(0,0,0,0.75)_50%)] md:[background:linear-gradient(315deg,_transparent_50%,_rgba(255,255,255,0.3)_50%)]" />
@@ -161,12 +159,12 @@ const [hoveredSlug, setHoveredSlug] = useState(null);
   ];
 
   return (
-    <div className="relative h-fit p-4 w-72 gap-2 flex flex-col justify-center items-start shadow-xl text-amber-50 md:text-neutral-900">
+    <div className="relative h-fit p-4 w-72 gap-2 flex flex-col justify-center items-start shadow-xl text-amber-50 md:text-white">
       {services.map(({ slug, key }) => (
         <div key={slug} className="md:w-full h-fit">
           <Link
             href={`/${locale}/services/${slug}`}
-            className="relative hover:text-[#4D5C5A] text-[1.1rem] md:text-[1rem] md:w-full h-fit"
+            className="relative text-[1.1rem] md:text-[1rem] md:w-full h-fit"
             onMouseEnter={() => setHoveredSlug(slug)}
             onMouseLeave={() => setHoveredSlug(null)}
             onClick={() => setIsOpen(false)}
@@ -177,7 +175,7 @@ const [hoveredSlug, setHoveredSlug] = useState(null);
               style={{
                 transform: hoveredSlug === slug ? "scaleX(1)" : "scaleX(0)",
               }}
-              className="absolute -bottom-2 left-1/2 -translate-x-1/2 h-[2px] w-1/2 origin-center rounded-full bg-white transition-transform duration-300 ease-out"
+              className="absolute -bottom-2 left-1/2 -translate-x-1/2 h-[2px] w-1/2 origin-center rounded-full bg-amber-300 transition-transform duration-300 ease-out"
             />
           </Link>
         </div>

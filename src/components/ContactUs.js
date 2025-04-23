@@ -54,11 +54,11 @@ export default function ContactUs() {
       {/* Logo & SocialMedia */}
       <div className="flex flex-col items-center justify-center mb-8 md:mb-0">
         <Image
-          src={"/img/logo.png"}
+          src={"/img/logoFooter.png"}
           alt="Logo Contactus"
           width={200}
           height={100}
-          className="object-contain"
+          className="object-contain mb-4"
           priority
         />
         <SocialMedia />

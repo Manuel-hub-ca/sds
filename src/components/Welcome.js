@@ -13,11 +13,17 @@ const Welcome = () => {
         style={{ backgroundImage: "url('/back.jpg')" }}
       >
         {/* Dark fade overlay */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 
         {/* Text content */}
         <div className="absolute inset-0 z-10 flex flex-col items-center md:items-end w-full justify-end pb-28 md:pb-36 sm:p-2.5">
-          <h1 className="text-2xl md:text-6xl font-bold mb-3 w-11/12">
+          <h1 className="text-3xl md:text-7xl w-fit md:w-11/12 font-bold text-center">
+            S.D.S CONSTRUCTION
+          </h1>
+          <h1 className="text-2xl md:text-6xl w-fit md:w-11/12 font-bold text-center">
+            9486-3669 QUEBEC INC
+          </h1>
+          <h1 className="text-2xl md:text-6xl font-bold mb-3 w-11/12 mt-6">
             {t("welcome.title")}
           </h1>
           <h2 className="text-xl md:text-3xl font-bold mb-2 w-11/12">
