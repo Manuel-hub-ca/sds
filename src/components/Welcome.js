@@ -17,10 +17,10 @@ const Welcome = () => {
 
         {/* Text content */}
         <div className="absolute inset-0 z-10 flex flex-col items-center md:items-end w-full justify-end pb-28 md:pb-36 sm:p-2.5">
-          <h1 className="text-3xl md:text-7xl w-fit md:w-11/12 font-bold text-center">
+          <h1 className="text-3xl md:text-7xl w-11/12 font-bold text-left">
             S.D.S CONSTRUCTION
           </h1>
-          <h1 className="text-2xl md:text-6xl w-fit md:w-11/12 font-bold text-center">
+          <h1 className="text-2xl md:text-6xl w-11/12 font-bold text-left">
             9486-3669 QUEBEC INC
           </h1>
           <h1 className="text-2xl md:text-6xl font-bold mb-3 w-11/12 mt-6">

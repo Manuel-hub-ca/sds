@@ -20,7 +20,7 @@
   "policy.points.1": "Nous collectons uniquement les données nécessaires à nos services.",
   "policy.points.2": "Vos informations ne sont jamais vendues ou partagées sans votre consentement.",
   "policy.points.3": "Vous pouvez demander l'accès ou la suppression de vos données à tout moment.",
-  "project":"Projets",
+  "project": "Projets",
   "contact.email": "Courriel",
   "contact.phone1": "Téléphone 1",
   "contact.phone2": "Téléphone 2",
@@ -119,5 +119,9 @@
   "services.items.demolition.description": "Démolition propre et sécuritaire pour préparer efficacement vos projets de rénovation ou d’agrandissement.",
 
   "copyright": "© 2025 Tous droits réservés",
-  "privacypolicy":"Politique de confidentialité"
+  "privacypolicy": "Politique de confidentialité",
+  "projects": "Projets",
+  "services": "Services",
+  "contact": "Contact",
+  "about": "À propos"
 }

@@ -38,12 +38,13 @@ const NavBar = () => {
     // console.log("isMobile changed:", isMobile);
   }, [isMobile]);
   const isActive = (href) => pathname === href;
+  // bg-[linear-gradient(to_right,_black_0%,_black_30%,_transparent_50%,_transparent_100%)]
   return (
-    <div className="flex fixed top-0 z-50 left-0 w-screen h-20 bg-[linear-gradient(to_right,_black_0%,_black_30%,_transparent_50%,_transparent_100%)] justify-between md:justify-around px-3 py-0">
+    <div className="flex fixed top-0 z-50 left-0 w-screen h-20 bg-black/15 justify-between md:justify-around px-3 py-0">
       <div className="relative w-32 h-full md:w-40">
         <Link href={localeHome} className="flex justify-center">
           <Image
-            src="/img/logo.JPG"
+            src="/img/logoFooter.png"
             alt="Company Logo"
             fill
             priority

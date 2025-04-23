@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FlyoutLink, PricingContent } from "./NavBar";
 import SocialMedia from "./SocialMedia";
+import { useTranslations } from "./LanguageProvider";
 const Hamburger = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [browserClass, setBrowserClass] = useState("");
@@ -15,7 +16,7 @@ const Hamburger = () => {
   const locale = pathname.split("/")[1]; // extract 'fr', 'en', etc.
   const localeHome = `/${locale}`;
   const r = useRouter();
-
+  const t = useTranslations();
   const handleScroll = (id) => {
     setIsOpen(false);
     r.push("/#" + id);
@@ -38,6 +39,7 @@ const Hamburger = () => {
   }, []);
 
   if (!mounted) return null; // ✅ Wait until browser is known
+
 
   return (
     <>
@@ -87,17 +89,17 @@ const Hamburger = () => {
             className="transform hover:scale-110 hover:text-[#4D5C5A]"
             onClick={() => setIsOpen(false)}
           >
-            Projects
+            {t("projects")}
           </Link>
 
           <div>
             <FlyoutLink href="#" FlyoutContent={PricingContent} isOpen={isOpen} setIsOpen={setIsOpen}>
-              Services
+              {t("services")}
             </FlyoutLink>
           </div>
 
-          <button onClick={() => handleScroll("aboutUs")}>About</button>
-          <button onClick={() => handleScroll("contact")}>Contact Us</button>
+          <button onClick={() => handleScroll("aboutUs")}>{ t("about")}</button>
+          <button onClick={() => handleScroll("contact")}>{ t("contact")}</button>
           <SocialMedia />
         </div>
       </div>
