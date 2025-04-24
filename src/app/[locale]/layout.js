@@ -35,7 +35,7 @@ export const metadata = {
     url: "https://yourdomain.com", // update this
     siteName: "SDS Renovation",
     locale: "fr_CA",
-    type: "business.business",
+    type: "website",
     images: [
       {
         url: "/img/logoFooter.png", // make sure this image exists in /public
