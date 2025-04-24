@@ -58,7 +58,7 @@ export default function ContactUs() {
           alt="Logo Contactus"
           width={200}
           height={100}
-          className="object-contain mb-4"
+          className="object-contain mb-6"
           priority
         />
         <SocialMedia />
@@ -83,7 +83,7 @@ export default function ContactUs() {
               href={s.url}
               target={s.icon === faLocationDot ? "_blank" : "_self"}
               rel={s.icon === faLocationDot ? "noopener noreferrer" : undefined}
-              className="text-white hover:underline"
+              className="text-white hover:text-amber-300"
             >
               {InfoBlock}
             </a>

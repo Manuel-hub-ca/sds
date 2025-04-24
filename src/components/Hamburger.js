@@ -65,17 +65,17 @@ const Hamburger = () => {
       </button>
 
       <div
-        className={`w-full h-screen flex flex-col items-center bg-[#6E6D50] absolute right-0 top-0 transition-transform duration-500 ${
+        className={`w-full h-screen flex flex-col items-center bg-[#6E6D50] text-2xl absolute right-0 top-0 transition-transform duration-500 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div
-          className={`h-10/12 flex flex-col items-center gap-4 ${browserClass}`}
+          className={`h-10/12 flex flex-col text-white items-center gap-4 ${browserClass}`}
         >
           <div className="relative w-1/3 h-1/4 md:w-40">
             <Link href={localeHome} onClick={() => setIsOpen(!isOpen)}>
               <Image
-                src="/img/logo.png"
+                src="/img/logoFooter.png"
                 alt="Company Logo"
                 fill
                 priority
@@ -93,13 +93,20 @@ const Hamburger = () => {
           </Link>
 
           <div>
-            <FlyoutLink href="#" FlyoutContent={PricingContent} isOpen={isOpen} setIsOpen={setIsOpen}>
+            <FlyoutLink
+              href="#"
+              FlyoutContent={PricingContent}
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
+            >
               {t("services")}
             </FlyoutLink>
           </div>
 
-          <button onClick={() => handleScroll("aboutUs")}>{ t("about")}</button>
-          <button onClick={() => handleScroll("contact")}>{ t("contact")}</button>
+          <button onClick={() => handleScroll("aboutUs")}>{t("about")}</button>
+          <button onClick={() => handleScroll("contact")} className=" mb-5">
+            {t("contact")}
+          </button>
           <SocialMedia />
         </div>
       </div>
