@@ -33,7 +33,7 @@ const Peinture = () => {
         )}
 
         <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] md:mr-3 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
-          <p className=" text-justify w-full">{t("demolition")}</p>
+          <p className=" text-justify w-full">{t("peinture")}</p>
         </div>
       </div>
       {/* <div className="h-screen w-screen bg-[#E9967A] flex flex-col justify-center items-center text-white">
