@@ -22,10 +22,10 @@ const Welcome = () => {
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 
         {/* Text content */}
-        <div className="absolute inset-0 z-10 flex flex-col md:items-start w-full justify-between md:justify-end pb-28 md:pb-36 p-2.5 md:px-8">
+        <div className="absolute inset-0 z-10 flex flex-col items-center md:items-start w-full justify-between md:justify-end pb-28 md:pb-36 p-2.5 md:px-8">
           <div>
             {" "}
-            <h1 className="text-3xl md:text-6xl w-fit font-bold mt-24">
+            <h1 className="text-3xl md:text-6xl w-fit font-bold mt-28">
               SDS CONSTRUCTION
             </h1>
             {/* <h1 className="text-2xl md:text-6xl w-11/12 font-bold">
@@ -33,7 +33,7 @@ const Welcome = () => {
             </h1> */}
           </div>
 
-          <h1 className="text-2xl md:text-5xl font-bold mb-3 w-11/12 mt-6">
+          <h1 className="text-2xl md:text-5xl  font-bold mb-3 w-fit md:w-11/12 mt-6">
             {t("welcome.title")}
           </h1>
           {!isMobile ? (
