@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useTranslations } from "./LanguageProvider";
 import { FlyoutLink, PricingContent } from "./NavBar";
 import SocialMedia from "./SocialMedia";
-import { useTranslations } from "./LanguageProvider";
 const Hamburger = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [browserClass, setBrowserClass] = useState("");
@@ -40,7 +40,6 @@ const Hamburger = () => {
 
   if (!mounted) return null; // ✅ Wait until browser is known
 
-
   return (
     <>
       <button
@@ -70,7 +69,7 @@ const Hamburger = () => {
         }`}
       >
         <div
-          className={`h-10/12 flex flex-col text-white items-center gap-4 ${browserClass}`}
+          className={`h-10/12 flex flex-col text-white items-center justify-start gap-4 ${browserClass}`}
         >
           <div className="relative w-1/3 h-1/4 md:w-40">
             <Link href={localeHome} onClick={() => setIsOpen(!isOpen)}>
@@ -108,6 +107,10 @@ const Hamburger = () => {
             {t("contact")}
           </button>
           <SocialMedia />
+          <div className=" flex flex-row w-fit gap-2.5 mt-12">
+            <h1 className="text-4xl font-bold w-fit h-fit text-amber-300">SDS</h1>
+            <h1 className=" text-4xl font-bold w-fit">CONTRUCTION</h1>
+          </div>
         </div>
       </div>
     </>

@@ -133,7 +133,7 @@ const FlyoutLink = ({ children, href, FlyoutContent, isOpen, setIsOpen}) => {
             className="absolute left-1/2 top-12 bg-black/75 rounded-md"
           >
             <div className="absolute bg-transparent -top-6 left-0 right-0 h-6" />
-            <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 [background:linear-gradient(315deg,_transparent_50%,_rgba(0,0,0,0.75)_50%)] md:[background:linear-gradient(315deg,_transparent_50%,_rgba(255,255,255,0.3)_50%)]" />
+            <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 [background:linear-gradient(315deg,_transparent_50%,_rgba(0,0,0,0.75)_50%)]" />
             <FlyoutContent isOpen={ isOpen} setIsOpen={setIsOpen} />
           </motion.div>
         )}
