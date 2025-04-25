@@ -1,11 +1,11 @@
-import { getDictionary } from "@/lib/i18n";
+import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import { getDictionary } from "@/lib/i18n";
+import AudioPlayer from "@/src/components/AudioPlayer";
+import ClientCustomCursor from "@/src/components/ClientCustomCursor";
 import ContactUs from "@/src/components/ContactUs";
 import "./globals.css";
-import ClientCustomCursor from "@/src/components/ClientCustomCursor";
-import AudioPlayer from "@/src/components/AudioPlayer";
 
 export async function generateStaticParams() {
   return [{ locale: "en" }, { locale: "fr" }, { locale: "es" }];
@@ -66,7 +66,6 @@ export const metadata = {
   },
 };
 
-
 export default async function RootLayout(props) {
   const { children } = props;
 
@@ -79,9 +78,9 @@ export default async function RootLayout(props) {
     <html lang={locale}>
       <body className="w-screen">
         <LanguageProvider dictionary={dictionary}>
+          <AudioPlayer />
           <NavBar />
-          <AudioPlayer/>
-          <ClientCustomCursor/>
+          <ClientCustomCursor />
           <main>{children}</main>
           <ContactUs />
           <Footer />

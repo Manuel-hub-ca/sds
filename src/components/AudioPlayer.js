@@ -7,9 +7,29 @@ export default function AudioPlayer() {
 
   useEffect(() => {
     const audio = audioRef.current;
-    if (audio) {
-      audio.volume = 0.3; // optional: set default volume
-    }
+    if (!audio) return;
+
+    audio.volume = 0.4; // Set your preferred volume
+    audio.muted = true; // Start muted to allow autoplay
+    audio.play().catch(() => {}); // Attempt to play silently
+
+    // Wait for first user interaction to unmute and play with sound
+    const enableAudio = () => {
+      if (audio) {
+        audio.muted = false;
+        audio.play().catch(() => {});
+      }
+      window.removeEventListener("click", enableAudio);
+      window.removeEventListener("touchstart", enableAudio);
+    };
+
+    window.addEventListener("click", enableAudio);
+    window.addEventListener("touchstart", enableAudio);
+
+    return () => {
+      window.removeEventListener("click", enableAudio);
+      window.removeEventListener("touchstart", enableAudio);
+    };
   }, []);
 
   return (
@@ -19,3 +39,5 @@ export default function AudioPlayer() {
     </audio>
   );
 }
+
+
