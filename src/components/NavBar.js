@@ -146,7 +146,7 @@ const PricingContent = ({isOpen, setIsOpen}) => {
   const t = useTranslations();
   const pathname = usePathname();
   const locale = pathname.split("/")[1] || "fr";
-const [hoveredSlug, setHoveredSlug] = useState(null);
+  const [hoveredSlug, setHoveredSlug] = useState(null);
 
   const services = [
     { slug: "bois-metal", key: "boisMetal" },
@@ -168,7 +168,10 @@ const [hoveredSlug, setHoveredSlug] = useState(null);
             className="relative text-[1.1rem] md:text-[1rem] md:w-full h-fit"
             onMouseEnter={() => setHoveredSlug(slug)}
             onMouseLeave={() => setHoveredSlug(null)}
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              if (window.innerWidth < 768) {
+                setIsOpen(!isOpen)
+            }}}
           >
             {t(`services.items.${key}.title`)}
 

@@ -2,11 +2,13 @@
 
 import { useTranslations } from "@/components/LanguageProvider";
 import RightSideUp from "@/src/components/RightSideUp";
-import UpSideDown from "@/src/components/UpSideDown";
+import useIsMobile from "@/src/hooks/useIsMobile";
+import Image from "next/image";
 
 const TireurJoints = () => {
   const t = useTranslations();
-
+  const isMobile = useIsMobile();
+  //bg-[#5A524C]
   return (
     <>
       <div
@@ -17,24 +19,35 @@ const TireurJoints = () => {
         <h1 className="absolute text-3xl md:text-5xl mx-auto my-0 max-w-5xl leading-snug text-left px-4 mb-16">
           {t("joints.hero.title")}
         </h1>
-        <RightSideUp bgColor="#5A524C" />
+        {/* <RightSideUp bgColor="#5A524C" /> */}
       </div>
 
-      <div className="h-screen w-screen bg-[#5A524C] flex flex-col justify-center items-center text-white">
-        <div className="max-w-5xl h-10/12 flex flex-col justify-around text-2xl md:text-3xl px-4">
-          <h1>{t("joints.section1.title")}</h1>
-          <p className="text-2xl">{t("joints.section1.p1")}</p>
-          <p>{t("joints.section1.p2")}</p>
-          <p>{t("joints.section1.p3")}</p>
+      <div className=" relative flex flex-col md:flex-row  overflow-visible bg-gray-300">
+        <div className=" relative w-screen md:w-[800px] h-screen md:h-[700px] ">
+          <Image src={"/joint1.jpg"} alt="img1 joint" fill />
+        </div>
+        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] md:mr-3 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
+          <p className=" text-justify w-full ">{t("joint")}</p>
         </div>
       </div>
+      {/* 
+      <div className="w-screen h-10/12 text-2xl md:text-3xl px-4 bg-[#5A524C]">
+        <div className=" w-fit md:w-full text-xl md:text-3xl px-4 text-white p-12">
+          <div className=" relative w-full mb-8 md:w-[500px] h-[400px] md:h-[500px] float-right ml-6">
+            <Image src={"/joint1.jpg"} alt="img1 joint" fill />
+          </div>
+          <p className=" text-justify ">
+            {t("joint")}
+          </p>
+        </div>
+      </div> */}
 
       <div
         className="relative h-screen w-screen bg-no-repeat bg-cover bg-center text-white text-5xl flex flex-col justify-center items-center"
         style={{ backgroundImage: "url('/dry2.png')" }}
       >
         <RightSideUp bgColor="#6E6D50" />
-        <UpSideDown bgColor="#5A524C" />
+        {/* <UpSideDown bgColor="#5A524C" /> */}
         <div className="absolute self-center w-full h-2/3 z-0 bg-[linear-gradient(to_bottom,_transparent_5%,_rgba(0,0,0,0.2)_20%,_rgba(0,0,0,0.6)_30%,_rgba(0,0,0,0.6)_50%,_rgba(0,0,0,0.6)_70%,_rgba(0,0,0,0.6)_88%,transparent_95%)]" />
         <div className="absolute z-10 max-w-5xl h-11/12 gap-9 flex flex-col justify-center items-start px-4 text-left leading-normal text-white text-3xl">
           <span>{t("joints.section2.p1")}</span>
