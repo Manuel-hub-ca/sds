@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ContactUs from "@/src/components/ContactUs";
 import "./globals.css";
 import ClientCustomCursor from "@/src/components/ClientCustomCursor";
+import AudioPlayer from "@/src/components/AudioPlayer";
 
 export async function generateStaticParams() {
   return [{ locale: "en" }, { locale: "fr" }, { locale: "es" }];
@@ -79,6 +80,7 @@ export default async function RootLayout(props) {
       <body className="w-screen">
         <LanguageProvider dictionary={dictionary}>
           <NavBar />
+          <AudioPlayer/>
           <ClientCustomCursor/>
           <main>{children}</main>
           <ContactUs />
