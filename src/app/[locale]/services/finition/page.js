@@ -2,7 +2,6 @@
 
 import { useTranslations } from "@/components/LanguageProvider";
 import RightSideUp from "@/src/components/RightSideUp";
-import UpSideDown from "@/src/components/UpSideDown";
 import useIsMobile from "@/src/hooks/useIsMobile";
 import Image from "next/image";
 const Finition = () => {
@@ -13,16 +12,25 @@ const Finition = () => {
       {/* HERO SECTION */}
       <div
         className="relative w-screen h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-14 items-center text-white"
-        style={{ backgroundImage: "url('/finition1.jpg')" }}
+        style={{
+          backgroundImage: `url(${
+            isMobile ? "/finition1Phone.png" : "/finition1.png"
+          })`,
+        }}
       >
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
         <h1 className="absolute text-3xl md:text-5xl mx-auto my-6 max-w-5xl px-2 md:px-0 mb-16">
           {t("finition.hero.title")}
         </h1>
-        {/* <RightSideUp bgColor="#345C5A" /> */}
       </div>
+
       {/* MIDDLE SECTION */}
       <div className=" relative flex flex-col md:flex-row  overflow-visible bg-gray-200">
+        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] border-r-4 border-r-yellow-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
+          <p className=" text-justify hyphens-auto w-full">
+            {t("finishingWork")}
+          </p>
+        </div>
         {isMobile ? (
           <div className=" relative w-screen md:w-[800px] h-screen md:h-[800px] ">
             <Image src={"/finitionPhone.png"} alt="img1 joint" fill />
@@ -32,23 +40,16 @@ const Finition = () => {
             <Image src={"/finition.png"} alt="img1 joint" fill />
           </div>
         )}
-
-        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] md:mr-3 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
-          <p className=" text-justify w-full">{t("finishingWork")}</p>
-        </div>
       </div>
-      {/* <div className="h-screen w-screen bg-[#345C5A] flex flex-col justify-center items-center text-white">
-        <div className="max-w-5xl h-11/12 flex flex-col justify-around text-xl md:text-3xl px-3 md:px-0">
-          <h1>{t("finition.section1.title")}</h1>
-          <p className="text-2xl">{t("finition.section1.p1")}</p>
-          <p>{t("finition.section1.p2")}</p>
-          <p>{t("finition.section1.p3")}</p>
-        </div>
-      </div> */}
+
       {/* FINAL SECTION */}
       <div
         className="relative h-screen w-screen bg-no-repeat bg-cover bg-center text-white text-2xl md:text-5xl flex flex-col justify-center items-center"
-        style={{ backgroundImage: "url('/finition2.jpg')" }}
+        style={{
+          backgroundImage: `url(${
+            isMobile ? "/finition3Phone.png" : "/finition3.png"
+          })`,
+        }}
       >
         <RightSideUp bgColor="#6E6D50" />
         {/* <UpSideDown bgColor="#345C5A" /> */}

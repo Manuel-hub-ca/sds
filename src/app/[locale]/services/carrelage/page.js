@@ -13,7 +13,10 @@ const Carrelage = () => {
       {/* Hero Section */}
       <div
         className="relative w-screen h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-14 items-center text-white"
-        style={{ backgroundImage: "url('/tile1.jpg')" }}
+        style={{
+          backgroundImage: `url(${isMobile ? "/tilesPhone.png" : "/tiles.png"})`,
+        }}
+
       >
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
         <h1 className="absolute text-3xl md:text-5xl mx-auto my-0 max-w-5xl leading-snug text-left px-4 mb-16">
@@ -39,19 +42,15 @@ const Carrelage = () => {
           <p className=" text-justify w-full">{t("carreaux")}</p>
         </div>
       </div>
-      {/* <div className="h-screen w-screen bg-[#6E6D50] flex flex-col justify-center items-center text-white">
-        <div className="max-w-5xl h-10/12 flex flex-col justify-around text-2xl md:text-3xl px-4">
-          <h1>{t("carrelage.section1.title")}</h1>
-          <p className="text-2xl">{t("carrelage.section1.p1")}</p>
-          <p>{t("carrelage.section1.p2")}</p>
-          <p>{t("carrelage.section1.p3")}</p>
-        </div>
-      </div> */}
 
       {/* Value Proposition */}
       <div
         className="relative h-screen w-screen bg-no-repeat bg-cover bg-center text-white text-5xl flex flex-col justify-center items-center"
-        style={{ backgroundImage: "url('/tile2.jpg')" }}
+        style={{
+          backgroundImage: `url(${
+            isMobile ? "/tiles3Phone.png" : "/tiles3.png"
+          })`,
+        }}
       >
         <RightSideUp bgColor="#6E6D50" />
         {/* <UpSideDown bgColor="#6E6D50" /> */}

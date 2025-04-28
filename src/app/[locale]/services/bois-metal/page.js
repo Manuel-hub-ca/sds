@@ -2,18 +2,20 @@
 
 import { useTranslations } from "@/components/LanguageProvider";
 import RightSideUp from "@/src/components/RightSideUp";
-import UpSideDown from "@/src/components/UpSideDown";
-import Image from "next/image";
 import useIsMobile from "@/src/hooks/useIsMobile";
+import Image from "next/image";
+
 const BoisMetal = () => {
   const t = useTranslations();
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
   return (
     <>
       {/* HERO SECTION */}
       <div
         className="relative w-screen h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-14 items-center text-white"
-        style={{ backgroundImage: "url('/wood1.jpg')" }}
+        style={{
+          backgroundImage: `url(${isMobile ? "/woodPhone.png" : "/wood1.png"})`,
+        }}
       >
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
         <h1 className="absolute text-3xl md:text-5xl mx-auto my-6 max-w-5xl px-2 md:px-0 mb-16">
@@ -23,20 +25,19 @@ const BoisMetal = () => {
       </div>
 
       {/* MIDDLE SECTION */}
-      <div className=" relative flex flex-col md:flex-row  overflow-visible bg-gray-800">
+      <div className=" relative flex flex-col items-center md:flex-row  overflow-visible bg-neutral-800 md:bg-gray-800">
+        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px]  md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10 md:border-r-4 md:border-r-yellow-300">
+          <p className=" text-justify w-full hyphens-auto">{t("woodMetal")}</p>
+        </div>
         {isMobile ? (
-          <div className=" relative w-screen md:w-[800px] h-screen md:h-[800px] ">
+          <div className=" relative flex justify-center w-11/12 md:w-[800px] h-screen  md:h-[800px] border-l-4 border-l-yellow-300">
             <Image src={"/metalPhone.png"} alt="img1 joint" fill />
           </div>
         ) : (
-          <div className=" relative w-screen md:w-[800px] h-screen md:h-[700px] ">
+          <div className=" relative w-screen md:w-[800px] h-[700px] ">
             <Image src={"/metal.png"} alt="img1 joint" fill />
           </div>
         )}
-
-        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] md:mr-3 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
-          <p className=" text-justify w-full">{t("woodMetal")}</p>
-        </div>
       </div>
       {/* <div className="h-screen w-screen bg-[#334155] flex flex-col justify-center items-center text-white">
         <div className="max-w-5xl h-11/12 flex flex-col justify-around text-xl md:text-3xl px-3 md:px-0">

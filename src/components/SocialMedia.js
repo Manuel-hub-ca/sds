@@ -31,7 +31,7 @@ export default function SocialMedia() {
           href={s.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-transform duration-300 ease-in-out hover:scale-110 text-gray-300 hover:text-[#4D5C5A]"
+          className="transition-transform duration-300 ease-in-out hover:scale-110 text-gray-300 hover:text-amber-300"
         >
           <FontAwesomeIcon icon={s.icon} className="w-8 h-8 mx-2.5" />
         </a>

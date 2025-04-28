@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import NavBar from "@/components/NavBar";
 import { getDictionary } from "@/lib/i18n";
-import AudioPlayer from "@/src/components/AudioPlayer";
+// import AudioPlayer from "@/src/components/AudioPlayer";
 import ClientCustomCursor from "@/src/components/ClientCustomCursor";
 import ContactUs from "@/src/components/ContactUs";
 import "./globals.css";
@@ -78,7 +78,7 @@ export default async function RootLayout(props) {
     <html lang={locale}>
       <body className="w-screen">
         <LanguageProvider dictionary={dictionary}>
-          <AudioPlayer />
+          {/* <AudioPlayer /> */}
           <NavBar />
           <ClientCustomCursor />
           <main>{children}</main>

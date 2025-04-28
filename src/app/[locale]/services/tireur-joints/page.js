@@ -23,24 +23,20 @@ const TireurJoints = () => {
       </div>
 
       <div className=" relative flex flex-col md:flex-row  overflow-visible bg-gray-300">
-        <div className=" relative w-screen md:w-[800px] h-screen md:h-[700px] ">
-          <Image src={"/joint1.jpg"} alt="img1 joint" fill />
-        </div>
-        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] md:mr-3 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
+        {isMobile ? (
+          <div className=" relative w-screen md:w-[800px] h-screen md:h-[700px] ">
+            <Image src={"/tireJoint3.Phone.png"} alt="img1 joint" fill />
+          </div>
+        ) : (
+          <div className=" relative w-screen md:w-[800px] h-screen md:h-[700px] ">
+            <Image src={"/tireJoint3.png"} alt="img1 joint" fill />
+          </div>
+        )}
+
+        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] md:mr-3 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10 border-l-4 border-l-yellow-300">
           <p className=" text-justify w-full ">{t("joint")}</p>
         </div>
       </div>
-      {/* 
-      <div className="w-screen h-10/12 text-2xl md:text-3xl px-4 bg-[#5A524C]">
-        <div className=" w-fit md:w-full text-xl md:text-3xl px-4 text-white p-12">
-          <div className=" relative w-full mb-8 md:w-[500px] h-[400px] md:h-[500px] float-right ml-6">
-            <Image src={"/joint1.jpg"} alt="img1 joint" fill />
-          </div>
-          <p className=" text-justify ">
-            {t("joint")}
-          </p>
-        </div>
-      </div> */}
 
       <div
         className="relative h-screen w-screen bg-no-repeat bg-cover bg-center text-white text-5xl flex flex-col justify-center items-center"

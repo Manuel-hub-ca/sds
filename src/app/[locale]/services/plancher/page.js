@@ -38,19 +38,15 @@ const Plancher = () => {
           <p className=" text-justify w-full">{t("flooring")}</p>
         </div>
       </div>
-      {/* <div className="h-screen w-screen bg-[#7B4B3A] flex flex-col justify-center items-center text-white">
-        <div className="max-w-5xl h-10/12 flex flex-col justify-around text-2xl md:text-3xl px-4">
-          <h1>{t("plancher.section1.title")}</h1>
-          <p className="text-2xl">{t("plancher.section1.p1")}</p>
-          <p>{t("plancher.section1.p2")}</p>
-          <p>{t("plancher.section1.p3")}</p>
-        </div>
-      </div> */}
 
       {/* Value Proposition */}
       <div
         className="relative h-screen w-screen bg-no-repeat bg-cover bg-center text-white text-5xl flex flex-col justify-center items-center"
-        style={{ backgroundImage: "url('/floor2.jpg')" }}
+        style={{
+          backgroundImage: `url(${
+            isMobile ? "/plancher1Phone.png" : "/pancher1.png"
+          })`,
+        }}
       >
         <RightSideUp bgColor="#6E6D50" />
         {/* <UpSideDown bgColor="#7B4B3A" /> */}

@@ -29,14 +29,14 @@ const Projects = () => {
         <RightSideUp bgColor="#4D5C5A" />
       </header>
 
-      <div className="flex flex-col py-14">
+      {/* <div className="flex flex-col py-14">
         {imgProject.map((project, index) => (
           <Card key={index} imgUrl={project.imgUrl}>
-            {/* <h3 className="mb-3 text-xl">{project.title}</h3>
-            <p>{project.description}</p> */}
+            <h3 className="mb-3 text-xl">{project.title}</h3>
+            <p>{project.description}</p>
           </Card>
         ))}
-      </div>
+      </div> */}
 
       <RightSideUp bgColor="#6E6D50" />
     </div>
