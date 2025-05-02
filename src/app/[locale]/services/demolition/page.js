@@ -20,17 +20,8 @@ const Demolition = () => {
         <h1 className="absolute text-3xl md:text-5xl mx-auto my-0 max-w-5xl leading-snug text-left px-4 mb-16">
           {t("demolition.hero.title")}
         </h1>
-        {/* <RightSideUp bgColor="#581C1C" /> */}
       </div>
-      {/* 
-      <div className="h-screen w-screen bg-[#581C1C] flex flex-col justify-center items-center text-white">
-        <div className="max-w-5xl h-10/12 flex flex-col justify-around text-2xl md:text-3xl px-4">
-          <h1>{t("demolition.section1.title")}</h1>
-          <p className="text-2xl">{t("demolition.section1.p1")}</p>
-          <p>{t("demolition.section1.p2")}</p>
-          <p>{t("demolition.section1.p3")}</p>
-        </div>
-      </div> */}
+
 
       <div className=" relative flex flex-col md:flex-row  overflow-visible bg-amber-50">
         {isMoblie ? (
@@ -43,8 +34,8 @@ const Demolition = () => {
           </div>
         )}
 
-        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] md:mr-3 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
-          <p className=" text-justify w-full">{t("demolition")}</p>
+        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] border-l-4 border-l-yellow-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
+          <p className=" text-justify w-full hyphens-auto">{t("demolition")}</p>
         </div>
       </div>
       <div

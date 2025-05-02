@@ -19,7 +19,6 @@ const TireurJoints = () => {
         <h1 className="absolute text-3xl md:text-5xl mx-auto my-0 max-w-5xl leading-snug text-left px-4 mb-16">
           {t("joints.hero.title")}
         </h1>
-        {/* <RightSideUp bgColor="#5A524C" /> */}
       </div>
 
       <div className=" relative flex flex-col md:flex-row  overflow-visible bg-gray-300">
@@ -33,8 +32,8 @@ const TireurJoints = () => {
           </div>
         )}
 
-        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] md:mr-3 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10 border-l-4 border-l-yellow-300">
-          <p className=" text-justify w-full ">{t("joint")}</p>
+        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10 border-l-4 border-l-yellow-300">
+          <p className=" text-justify w-full hyphens-auto">{t("joint")}</p>
         </div>
       </div>
 

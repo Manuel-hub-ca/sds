@@ -24,6 +24,9 @@ const Plancher = () => {
 
       {/* Problem Awareness */}
       <div className=" relative flex flex-col md:flex-row  overflow-visible bg-amber-50">
+        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] border-r-4 border-amber-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
+          <p className=" text-justify w-full hyphens-auto">{t("flooring")}</p>
+        </div>
         {isMobile ? (
           <div className=" relative w-screen md:w-[800px] h-screen md:h-[800px] ">
             <Image src={"/plancherPhone.png"} alt="img1 joint" fill />
@@ -33,10 +36,6 @@ const Plancher = () => {
             <Image src={"/plancher.png"} alt="img1 joint" fill />
           </div>
         )}
-
-        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] md:mr-3 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
-          <p className=" text-justify w-full">{t("flooring")}</p>
-        </div>
       </div>
 
       {/* Value Proposition */}

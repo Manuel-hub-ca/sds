@@ -18,10 +18,12 @@ const Peinture = () => {
         <h1 className="absolute text-3xl md:text-5xl mx-auto my-0 max-w-5xl leading-snug text-left px-4 mb-16">
           {t("peinture.hero.title")}
         </h1>
-        {/* <RightSideUp bgColor="#E9967A" /> */}
       </div>
 
       <div className=" relative flex flex-col md:flex-row  overflow-visible bg-amber-50">
+        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] border-r-4 border-r-yellow-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
+          <p className=" text-justify w-full hyphens-auto">{t("peinture")}</p>
+        </div>
         {isMobile ? (
           <div className=" relative w-screen md:w-[800px] h-screen md:h-[800px] ">
             <Image src={"/peinturePhone.png"} alt="img1 joint" fill />
@@ -31,10 +33,6 @@ const Peinture = () => {
             <Image src={"/peinture.png"} alt="img1 joint" fill />
           </div>
         )}
-
-        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] md:mr-3 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
-          <p className=" text-justify w-full">{t("peinture")}</p>
-        </div>
       </div>
       {/* <div className="h-screen w-screen bg-[#E9967A] flex flex-col justify-center items-center text-white">
         <div className="max-w-5xl h-10/12 flex flex-col justify-around text-2xl md:text-3xl px-4">

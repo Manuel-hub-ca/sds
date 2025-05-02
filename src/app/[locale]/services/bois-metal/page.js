@@ -25,20 +25,29 @@ const BoisMetal = () => {
       </div>
 
       {/* MIDDLE SECTION */}
-      <div className=" relative flex flex-col items-center md:flex-row  overflow-visible bg-neutral-800 md:bg-gray-800">
-        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px]  md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10 md:border-r-4 md:border-r-yellow-300">
-          <p className=" text-justify w-full hyphens-auto">{t("woodMetal")}</p>
+      {/* <div 
+        className=" relative w-screen h-screen py-14 px-20 bg-no-repeat bg-center bg-cover"
+        style={{ backgroundImage: "url('backgoundBois.jpg')" }}
+      > */}
+        
+        <div className=" relative flex flex-col items-center md:flex-row  overflow-visible bg-neutral-800 md:bg-gray-800">
+          <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px]  md:translate-y-6 md:-mt-12 z-20 text-xl bg-white text-black p-10 md:border-r-4 md:border-r-yellow-300">
+            <p className=" text-justify w-full hyphens-auto">
+              {t("woodMetal")}
+            </p>
+          </div>
+          {isMobile ? (
+            <div className=" relative flex justify-center w-11/12 md:w-[800px] h-screen  md:h-[800px] border-l-4 border-l-yellow-300">
+              <Image src={"/metalPhone.png"} alt="img1 joint" fill />
+            </div>
+          ) : (
+            <div className=" relative w-screen md:w-[800px] h-[700px] ">
+              <Image src={"/metal.png"} alt="img1 joint" fill />
+            </div>
+          )}
         </div>
-        {isMobile ? (
-          <div className=" relative flex justify-center w-11/12 md:w-[800px] h-screen  md:h-[800px] border-l-4 border-l-yellow-300">
-            <Image src={"/metalPhone.png"} alt="img1 joint" fill />
-          </div>
-        ) : (
-          <div className=" relative w-screen md:w-[800px] h-[700px] ">
-            <Image src={"/metal.png"} alt="img1 joint" fill />
-          </div>
-        )}
-      </div>
+      {/* </div> */}
+
       {/* <div className="h-screen w-screen bg-[#334155] flex flex-col justify-center items-center text-white">
         <div className="max-w-5xl h-11/12 flex flex-col justify-around text-xl md:text-3xl px-3 md:px-0">
           <h1>{t("boisMetal.section1.title")}</h1>
