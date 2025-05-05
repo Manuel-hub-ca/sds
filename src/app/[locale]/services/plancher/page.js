@@ -23,7 +23,7 @@ const Plancher = () => {
       </div>
 
       {/* Problem Awareness */}
-      <div className=" relative flex flex-col md:flex-row  overflow-visible bg-amber-50">
+      {/* <div className=" relative flex flex-col md:flex-row  overflow-visible bg-amber-50">
         <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] border-r-4 border-amber-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
           <p className=" text-justify w-full hyphens-auto">{t("flooring")}</p>
         </div>
@@ -36,6 +36,30 @@ const Plancher = () => {
             <Image src={"/plancher.png"} alt="img1 joint" fill />
           </div>
         )}
+      </div> */}
+
+      <div
+        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16"
+        style={{ backgroundImage: "url('bgServices.jpeg')" }}
+      >
+        {/* Text Block */}
+        <div className="relative w-full md:w-[500px] h-fit md:h-[748px] border-r-4 border-amber-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
+          <p className="text-justify w-full hyphens-auto">{t("flooring")}</p>
+        </div>
+
+        {/* Image Block */}
+        <div
+          className={`relative w-full md:w-[800px] ${
+            isMobile ? "h-screen" : "h-[700px]"
+          }`}
+        >
+          <Image
+            src={isMobile ? "/plancherPhone.png" : "/plancher.png"}
+            alt="img1 joint"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
 
       {/* Value Proposition */}

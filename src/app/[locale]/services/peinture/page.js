@@ -20,7 +20,7 @@ const Peinture = () => {
         </h1>
       </div>
 
-      <div className=" relative flex flex-col md:flex-row  overflow-visible bg-amber-50">
+      {/* <div className=" relative flex flex-col md:flex-row  overflow-visible bg-amber-50">
         <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] border-r-4 border-r-yellow-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
           <p className=" text-justify w-full hyphens-auto">{t("peinture")}</p>
         </div>
@@ -33,15 +33,31 @@ const Peinture = () => {
             <Image src={"/peinture.png"} alt="img1 joint" fill />
           </div>
         )}
-      </div>
-      {/* <div className="h-screen w-screen bg-[#E9967A] flex flex-col justify-center items-center text-white">
-        <div className="max-w-5xl h-10/12 flex flex-col justify-around text-2xl md:text-3xl px-4">
-          <h1>{t("peinture.section1.title")}</h1>
-          <p className="text-2xl">{t("peinture.section1.p1")}</p>
-          <p>{t("peinture.section1.p2")}</p>
-          <p>{t("peinture.section1.p3")}</p>
-        </div>
       </div> */}
+
+      <div
+        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16"
+        style={{ backgroundImage: "url('bgServices.jpeg')" }}
+      >
+        {/* Text Block */}
+        <div className="relative w-full md:w-[500px] h-fit md:h-[748px] border-r-4 border-r-yellow-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
+          <p className="text-justify w-full hyphens-auto">{t("peinture")}</p>
+        </div>
+
+        {/* Image Block */}
+        <div
+          className={`relative w-full md:w-[800px] ${
+            isMobile ? "h-screen" : "h-[700px]"
+          }`}
+        >
+          <Image
+            src={isMobile ? "/peinturePhone.png" : "/peinture.png"}
+            alt="img1 joint"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
 
       <div
         className="relative h-screen w-screen bg-no-repeat bg-cover bg-center text-white text-5xl flex flex-col justify-center items-center"

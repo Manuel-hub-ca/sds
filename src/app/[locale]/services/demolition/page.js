@@ -9,7 +9,7 @@ import useIsMobile from "@/src/hooks/useIsMobile";
 
 const Demolition = () => {
   const t = useTranslations();
-  const isMoblie = useIsMobile()
+  const isMobile = useIsMobile()
   return (
     <>
       <div
@@ -22,7 +22,7 @@ const Demolition = () => {
         </h1>
       </div>
 
-
+      {/* 
       <div className=" relative flex flex-col md:flex-row  overflow-visible bg-amber-50">
         {isMoblie ? (
           <div className=" relative w-screen md:w-[800px] h-screen md:h-[800px] ">
@@ -37,7 +37,32 @@ const Demolition = () => {
         <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] border-l-4 border-l-yellow-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
           <p className=" text-justify w-full hyphens-auto">{t("demolition")}</p>
         </div>
+      </div> */}
+
+      <div
+        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16"
+        style={{ backgroundImage: "url('bgServices.jpeg')" }}
+      >
+        {/* Image Block */}
+        <div
+          className={`relative w-full md:w-[800px] ${
+            isMobile ? "h-screen" : "h-[700px]"
+          }`}
+        >
+          <Image
+            src={isMobile ? "/demolition.png" : "/demolition2.png"}
+            alt="img1 joint"
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        {/* Text Block */}
+        <div className="relative w-full md:w-[500px] h-fit md:h-[748px] border-l-4 border-l-yellow-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
+          <p className="text-justify w-full hyphens-auto">{t("demolition")}</p>
+        </div>
       </div>
+
       <div
         className="relative h-screen w-screen bg-no-repeat bg-cover bg-center text-white text-5xl flex flex-col justify-center items-center"
         style={{ backgroundImage: "url('/demolition2.jpg')" }}

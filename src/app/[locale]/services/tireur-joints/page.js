@@ -21,19 +21,27 @@ const TireurJoints = () => {
         </h1>
       </div>
 
-      <div className=" relative flex flex-col md:flex-row  overflow-visible bg-gray-300">
-        {isMobile ? (
-          <div className=" relative w-screen md:w-[800px] h-screen md:h-[700px] ">
-            <Image src={"/tireJoint3.Phone.png"} alt="img1 joint" fill />
-          </div>
-        ) : (
-          <div className=" relative w-screen md:w-[800px] h-screen md:h-[700px] ">
-            <Image src={"/tireJoint3.png"} alt="img1 joint" fill />
-          </div>
-        )}
+      <div
+        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16"
+        style={{ backgroundImage: "url('bgServices.jpeg')" }}
+      >
+        {/* Image Block */}
+        <div
+          className={`relative w-full md:w-[800px] ${
+            isMobile ? "h-screen" : "h-[700px]"
+          }`}
+        >
+          <Image
+            src={isMobile ? "/tireJoint3.Phone.png" : "/tireJoint3.png"}
+            alt="img1 joint"
+            fill
+            className="object-cover"
+          />
+        </div>
 
-        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10 border-l-4 border-l-yellow-300">
-          <p className=" text-justify w-full hyphens-auto">{t("joint")}</p>
+        {/* Text Block */}
+        <div className="relative w-full md:w-[500px] h-fit md:h-[748px] md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10 border-l-4 border-l-yellow-300">
+          <p className="text-justify w-full hyphens-auto">{t("joint")}</p>
         </div>
       </div>
 

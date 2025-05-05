@@ -25,7 +25,7 @@ const Finition = () => {
       </div>
 
       {/* MIDDLE SECTION */}
-      <div className=" relative flex flex-col md:flex-row  overflow-visible bg-gray-200">
+      {/* <div className=" relative flex flex-col md:flex-row  overflow-visible bg-gray-200">
         <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] border-r-4 border-r-yellow-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
           <p className=" text-justify hyphens-auto w-full">
             {t("finishingWork")}
@@ -40,6 +40,34 @@ const Finition = () => {
             <Image src={"/finition.png"} alt="img1 joint" fill />
           </div>
         )}
+        
+        
+      </div> */}
+
+      <div
+        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16"
+        style={{ backgroundImage: "url('bgServices.jpeg')" }}
+      >
+        {/* Text Block */}
+        <div className="relative w-full md:w-[500px] h-fit md:h-[748px] border-r-4 border-r-yellow-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
+          <p className="text-justify hyphens-auto w-full">
+            {t("finishingWork")}
+          </p>
+        </div>
+
+        {/* Image Block */}
+        <div
+          className={`relative w-full md:w-[800px] ${
+            isMobile ? "h-screen" : "h-[700px]"
+          }`}
+        >
+          <Image
+            src={isMobile ? "/finitionPhone.png" : "/finition.png"}
+            alt="img1 joint"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
 
       {/* FINAL SECTION */}

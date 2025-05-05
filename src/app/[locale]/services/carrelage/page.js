@@ -14,9 +14,10 @@ const Carrelage = () => {
       <div
         className="relative w-screen h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-14 items-center text-white"
         style={{
-          backgroundImage: `url(${isMobile ? "/tilesPhone.png" : "/tiles.png"})`,
+          backgroundImage: `url(${
+            isMobile ? "/tilesPhone.png" : "/tiles.png"
+          })`,
         }}
-
       >
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
         <h1 className="absolute text-3xl md:text-5xl mx-auto my-0 max-w-5xl leading-snug text-left px-4 mb-16">
@@ -25,24 +26,29 @@ const Carrelage = () => {
         {/* <RightSideUp bgColor="#6E6D50" /> */}
       </div>
 
-      {/* Problem Awareness */}
+      <div
+        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16"
+        style={{ backgroundImage: "url('bgServices.jpeg')" }}
+      >
+        {/* Image Block */}
+        <div
+          className={`relative w-full md:w-[800px] ${
+            isMobile ? "h-screen" : "h-[700px]"
+          }`}
+        >
+          <Image
+            src={isMobile ? "/carreauxPhone.png" : "/floor1.jpg"}
+            alt="img1 joint"
+            fill
+            className="object-cover"
+          />
+        </div>
 
-      <div className=" relative flex flex-col md:flex-row  overflow-visible bg-amber-50">
-        {isMobile ? (
-          <div className=" relative w-screen md:w-[800px] h-screen md:h-[800px] ">
-            <Image src={"/carreauxPhone.png"} alt="img1 joint" fill />
-          </div>
-        ) : (
-          <div className=" relative w-screen md:w-[800px] h-screen md:h-[700px] ">
-            <Image src={"/carreaux.png"} alt="img1 joint" fill />
-          </div>
-        )}
-
-        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] border-l-4 border-l-yellow-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
-          <p className=" text-justify w-full hyphens-auto">{t("carreaux")}</p>
+        {/* Text Block */}
+        <div className="relative w-full md:w-[500px] h-fit md:h-[748px] border-l-4 border-l-yellow-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
+          <p className="text-justify w-full hyphens-auto">{t("carreaux")}</p>
         </div>
       </div>
-
       {/* Value Proposition */}
       <div
         className="relative h-screen w-screen bg-no-repeat bg-cover bg-center text-white text-5xl flex flex-col justify-center items-center"
