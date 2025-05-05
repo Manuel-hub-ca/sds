@@ -13,7 +13,11 @@ const Plancher = () => {
       {/* Hero Section */}
       <div
         className="relative w-screen h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-14 items-center text-white"
-        style={{ backgroundImage: "url('/floor1.jpg')" }}
+        style={{
+          backgroundImage: isMobile
+            ? "url('floor1Phone.png')"
+            : "url('/floor1.png')",
+        }}
       >
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
         <h1 className="absolute text-3xl md:text-5xl mx-auto my-0 max-w-5xl leading-snug text-left px-4 mb-16">
@@ -22,25 +26,9 @@ const Plancher = () => {
         {/* <RightSideUp bgColor="#7B4B3A" /> */}
       </div>
 
-      {/* Problem Awareness */}
-      {/* <div className=" relative flex flex-col md:flex-row  overflow-visible bg-amber-50">
-        <div className=" relative w-screen h-fit md:w-[500px] md:h-[748px] border-r-4 border-amber-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">
-          <p className=" text-justify w-full hyphens-auto">{t("flooring")}</p>
-        </div>
-        {isMobile ? (
-          <div className=" relative w-screen md:w-[800px] h-screen md:h-[800px] ">
-            <Image src={"/plancherPhone.png"} alt="img1 joint" fill />
-          </div>
-        ) : (
-          <div className=" relative w-screen md:w-[800px] h-screen md:h-[700px] ">
-            <Image src={"/plancher.png"} alt="img1 joint" fill />
-          </div>
-        )}
-      </div> */}
-
       <div
-        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16"
-        style={{ backgroundImage: "url('bgServices.jpeg')" }}
+        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16 bg-no-repeat bg-center bg-cover"
+        style={{ backgroundImage: "url('/bgServices copy.jpeg')" }}
       >
         {/* Text Block */}
         <div className="relative w-full md:w-[500px] h-fit md:h-[748px] border-r-4 border-amber-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">

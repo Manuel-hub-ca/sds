@@ -40,8 +40,8 @@ const Gypse = () => {
       </div> */}
 
       <div
-        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16"
-        style={{ backgroundImage: "url('bgServices.jpeg')" }}
+        style={{ backgroundImage: "url('/bgServices copy.jpeg')" }}
+        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16 bg-no-repeat bg-center bg-cover"
       >
         <div className="relative w-full md:w-[800px] h-screen md:h-[700px]">
           <Image

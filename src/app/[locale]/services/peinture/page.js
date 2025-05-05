@@ -36,8 +36,8 @@ const Peinture = () => {
       </div> */}
 
       <div
-        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16"
-        style={{ backgroundImage: "url('bgServices.jpeg')" }}
+        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16 bg-no-repeat bg-center bg-cover"
+        style={{ backgroundImage: "url('/bgServices copy.jpeg')" }}
       >
         {/* Text Block */}
         <div className="relative w-full md:w-[500px] h-fit md:h-[748px] border-r-4 border-r-yellow-300 md:translate-y-6 md:-mt-12 z-20 text-xl bg-amber-50 p-10">

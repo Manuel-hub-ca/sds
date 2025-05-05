@@ -27,8 +27,8 @@ const Carrelage = () => {
       </div>
 
       <div
-        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16"
-        style={{ backgroundImage: "url('bgServices.jpeg')" }}
+        className="relative flex flex-col md:flex-row overflow-visible justify-center 2xl:py-16 bg-no-repeat bg-center bg-cover"
+        style={{ backgroundImage: "url('/bgServices copy.jpeg')" }}
       >
         {/* Image Block */}
         <div
