@@ -15,7 +15,7 @@ const Plancher = () => {
         className="relative w-screen h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-14 items-center text-white"
         style={{
           backgroundImage: isMobile
-            ? "url('floor1Phone.png')"
+            ? "url('/floor1Phone.png')"
             : "url('/floor1.png')",
         }}
       >
